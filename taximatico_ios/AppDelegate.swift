@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.whiteColor()
         
-        self.window?.rootViewController = LoginViewController()
+        self.window?.rootViewController = Session().valid ? nil : LoginViewController()
         
         self.window?.makeKeyAndVisible()
         

@@ -13,7 +13,7 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
     
     let info = [
         "user": [
-            "phone_number": "+523121125642"
+            "phone_number": ph
         ]
     ]
     
@@ -50,10 +50,10 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
     dataTask.resume()
 }
 
-func api_sendVerificationCode(verificationCode coder: String, completionHandler: ((Bool, String?) -> Void)?) {
+func api_sendVerificationCode(verificationCode code: String, completionHandler: ((Bool, String?) -> Void)?) {
     TXNetworkActivityIndicator.showNetworkActivityIndicator()
     
-    var request = NSURLRequest(URL: UserDomainEndpoint.CodeVerification.URL());
+    var request = NSURLRequest(URL: NSURL(string: "\(UserDomainEndpoint.CodeVerification.URL())?verification_code[code]=\(code)")!);
     
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: {data, response, error in
         TXNetworkActivityIndicator.hideNetworkActivityIndicator()

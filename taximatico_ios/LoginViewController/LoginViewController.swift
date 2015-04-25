@@ -54,6 +54,7 @@ class LoginViewController: UIViewController {
                 self.continueButton.setTitle("Continuar", forState: .Normal)
                 
             case .Verification:
+                self.phoneNumberTextField.text = ""
                 self.phoneNumberTextField.placeholder = "CODIGO DE VERIFICACION"
                 self.continueButton.setTitle("Verificar", forState: .Normal)
             }

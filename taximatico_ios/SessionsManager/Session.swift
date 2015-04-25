@@ -12,6 +12,11 @@ let token_key = "TokenKey"
 
 class Session {
     var token: String
+    var valid: Bool {
+        get {
+            return count(token) > 9
+        }
+    }
     
     init() {
         token = user_defaults_get_string(token_key)
