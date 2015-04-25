@@ -14,12 +14,19 @@ enum LoginState {
 }
 
 class LoginViewController: UIViewController {
+
+    lazy var logoImageView: UIImageView = {
+        let i = UIImageView(image: UIImage(named: "LogoImage"))
+        i.setTranslatesAutoresizingMaskIntoConstraints(false)
+        i.contentMode = .ScaleAspectFit
+        return i
+    }()
     
     lazy var phoneNumberTextField: UITextField = {
         let tf = UITextField(frame: CGRectMake(21, 343, 333, 52))
-        tf.backgroundColor = UIColor.redColor()
         tf.textAlignment = .Center
         tf.delegate = self
+        tf.backgroundColor = UIColor.tx_lightGreyColor()
         return tf
         }()
     
@@ -28,8 +35,9 @@ class LoginViewController: UIViewController {
         var newFrame = b.frame
         newFrame.origin.y += ((newFrame.size.height) + 12)
         b.frame = newFrame
-        b.setTitleColor(UIColor.redColor(), forState: .Normal)
+        b.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         b.setTitleColor(UIColor.blackColor(), forState: .Highlighted)
+        b.backgroundColor = UIColor.tx_disabledColor()
         b.addTarget(self, action: "continueButtonPressed", forControlEvents: .TouchUpInside)
         return b
         }()
@@ -68,6 +76,9 @@ class LoginViewController: UIViewController {
         
         self.state = .Registration
         
+        self.view.addSubview(self.logoImageView)
+        self.view.addConstraints(self.constraintsForLogoImageView())
+        
         self.view.addSubview(self.phoneNumberTextField)
         self.view.addSubview(self.continueButton)
         
@@ -101,6 +112,9 @@ extension LoginViewController {
     }
 }
 
+
+// MARK: - Text field Delegate
+
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -109,3 +123,16 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 
+// MARK: - Constraints
+
+extension LoginViewController {
+    func constraintsForLogoImageView() -> [AnyObject] {
+        var constraints = Array<AnyObject>()
+        
+        constraints.append(NSLayoutConstraint(item: self.logoImageView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1, constant: 43))
+        constraints.append(NSLayoutConstraint(item: self.logoImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 124))
+        constraints += NSLayoutConstraint.constraintsWithVisualFormat("|-17-[logoImageView]-17-|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["logoImageView": self.logoImageView])
+        
+        return constraints
+    }
+}

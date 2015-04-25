@@ -18,12 +18,12 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
     ]
     
     var jsonError: NSError?
-    let json = NSJSONSerialization.dataWithJSONObject(info, options: NSJSONWritingOptions.PrettyPrinted, error: &jsonError)
+    let json = NSJSONSerialization.dataWithJSONObject(info, options: .PrettyPrinted, error: &jsonError)
     
     var request = NSMutableURLRequest(URL: UserDomainEndpoint.Registrations.URL())
     request.HTTPMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.HTTPBody = json!
+    request.HTTPBody = json
     
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: { data, response, error in
         TXNetworkActivityIndicator.hideNetworkActivityIndicator()
@@ -53,7 +53,19 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
 func api_sendVerificationCode(verificationCode code: String, completionHandler: ((Bool, String?) -> Void)?) {
     TXNetworkActivityIndicator.showNetworkActivityIndicator()
     
-    var request = NSURLRequest(URL: NSURL(string: "\(UserDomainEndpoint.CodeVerification.URL())?verification_code[code]=\(code)")!);
+    
+    let info = ["verification_code" : [
+        "code" : code
+        ]
+    ]
+    
+    var jsonError: NSError?
+    let jsonData = NSJSONSerialization.dataWithJSONObject(info, options: .PrettyPrinted, error: &jsonError)
+    
+    var request = NSMutableURLRequest(URL: UserDomainEndpoint.CodeVerification.URL())
+    request.HTTPMethod = "POST"
+    request.HTTPBody = jsonData
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: {data, response, error in
         TXNetworkActivityIndicator.hideNetworkActivityIndicator()
