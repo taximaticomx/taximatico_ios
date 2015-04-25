@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B31AEBF38E00007739 /* AppDelegate.swift */; };
-		DFE933B61AEBF38E00007739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B51AEBF38E00007739 /* ViewController.swift */; };
-		DFE933B91AEBF38E00007739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE933B71AEBF38E00007739 /* Main.storyboard */; };
 		DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BA1AEBF38E00007739 /* Images.xcassets */; };
 		DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */; };
 		DFE933CA1AEBF38F00007739 /* taximatico_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933C91AEBF38F00007739 /* taximatico_iosTests.swift */; };
@@ -29,8 +27,6 @@
 		DFE933AE1AEBF38E00007739 /* taximatico_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taximatico_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE933B21AEBF38E00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFE933B31AEBF38E00007739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DFE933B51AEBF38E00007739 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DFE933B81AEBF38E00007739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFE933BA1AEBF38E00007739 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFE933BD1AEBF38E00007739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DFE933C31AEBF38F00007739 /* taximatico_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taximatico_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				DFE933B31AEBF38E00007739 /* AppDelegate.swift */,
-				DFE933B51AEBF38E00007739 /* ViewController.swift */,
-				DFE933B71AEBF38E00007739 /* Main.storyboard */,
 				DFE933BA1AEBF38E00007739 /* Images.xcassets */,
 				DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */,
 				DFE933B11AEBF38E00007739 /* Supporting Files */,
@@ -192,7 +186,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE933B91AEBF38E00007739 /* Main.storyboard in Resources */,
 				DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */,
 				DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */,
 			);
@@ -212,7 +205,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFE933B61AEBF38E00007739 /* ViewController.swift in Sources */,
 				DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,14 +228,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DFE933B71AEBF38E00007739 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFE933B81AEBF38E00007739 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -341,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = taximatico_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = taximatico_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
