@@ -14,6 +14,7 @@
 		DF59A5B41AEC257500B5913A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5B31AEC257500B5913A /* Session.swift */; };
 		DF59A5B61AEC2D1F00B5913A /* TXURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5B51AEC2D1F00B5913A /* TXURL.swift */; };
 		DF59A5B81AEC2E7700B5913A /* TXDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5B71AEC2E7700B5913A /* TXDictionary.swift */; };
+		DFBC17BC1AEC429700AAD246 /* TXColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC17BB1AEC429700AAD246 /* TXColor.swift */; };
 		DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B31AEBF38E00007739 /* AppDelegate.swift */; };
 		DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BA1AEBF38E00007739 /* Images.xcassets */; };
 		DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */; };
@@ -39,6 +40,7 @@
 		DF59A5B31AEC257500B5913A /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		DF59A5B51AEC2D1F00B5913A /* TXURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXURL.swift; sourceTree = "<group>"; };
 		DF59A5B71AEC2E7700B5913A /* TXDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXDictionary.swift; sourceTree = "<group>"; };
+		DFBC17BB1AEC429700AAD246 /* TXColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXColor.swift; sourceTree = "<group>"; };
 		DFE933AE1AEBF38E00007739 /* taximatico_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taximatico_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE933B21AEBF38E00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFE933B31AEBF38E00007739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				DF59A5A81AEC09C500B5913A /* TXUIKit.swift */,
+				DFBC17BB1AEC429700AAD246 /* TXColor.swift */,
 			);
 			path = TXUIKit;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFE933D51AEBF6CF00007739 /* LoginViewController.swift in Sources */,
+				DFBC17BC1AEC429700AAD246 /* TXColor.swift in Sources */,
 				DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */,
 				DF59A5B81AEC2E7700B5913A /* TXDictionary.swift in Sources */,
 				DF59A5B41AEC257500B5913A /* Session.swift in Sources */,
