@@ -9,7 +9,7 @@
 import Foundation
 
 func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bool) -> Void)?) {
-    showNetworkActivityIndicator()
+    TXNetworkActivityIndicator.showNetworkActivityIndicator()
     
     let info = [
         "user": [
@@ -26,7 +26,7 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
     request.HTTPBody = json!
     
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: { data, response, error in
-        hideNetworkActivityIndicator()
+        TXNetworkActivityIndicator.hideNetworkActivityIndicator()
         
         if error != nil {
             if let handler = completionHandler {
@@ -51,12 +51,12 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
 }
 
 func api_sendVerificationCode(verificationCode coder: String, completionHandler: ((Bool) -> Void)?) {
-    showNetworkActivityIndicator()
+    TXNetworkActivityIndicator.showNetworkActivityIndicator()
     
     var request = NSURLRequest(URL: UserDomainEndpoint.CodeVerification.URL());
     
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: {data, response, error in
-        hideNetworkActivityIndicator()
+        TXNetworkActivityIndicator.hideNetworkActivityIndicator()
         
         if error != nil {
             if let handler = completionHandler {

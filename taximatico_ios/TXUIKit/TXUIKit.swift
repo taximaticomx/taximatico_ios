@@ -8,10 +8,22 @@
 
 import UIKit
 
-func showNetworkActivityIndicator() {
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-}
-
-func hideNetworkActivityIndicator() {
-    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+class TXNetworkActivityIndicator {
+    static var number: Int = 0
+    
+    class func showNetworkActivityIndicator() {
+        number++
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    }
+    
+    class func hideNetworkActivityIndicator() {
+        if number > 0 {
+            number--
+        }
+        
+        if number == 0 {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
+    }
 }
