@@ -40,17 +40,17 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
         let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &dictError) as? Dictionary<String, String>
         
         if let response = jsonDict,
-           let handler = completionHandler {
-            dispatch_async(dispatch_get_main_queue(), {
-                handler(response["status"] == "ok" ? true : false)
-            })
+            let handler = completionHandler {
+                dispatch_async(dispatch_get_main_queue(), {
+                    handler(response["status"] == "ok" ? true : false)
+                })
         }
     })
     
     dataTask.resume()
 }
 
-func api_sendVerificationCode(verificationCode coder: String, completionHandler: ((Bool) -> Void)?) {
+func api_sendVerificationCode(verificationCode coder: String, completionHandler: ((Bool, String?) -> Void)?) {
     TXNetworkActivityIndicator.showNetworkActivityIndicator()
     
     var request = NSURLRequest(URL: UserDomainEndpoint.CodeVerification.URL());
@@ -61,7 +61,7 @@ func api_sendVerificationCode(verificationCode coder: String, completionHandler:
         if error != nil {
             if let handler = completionHandler {
                 dispatch_async(dispatch_get_main_queue(), {
-                    handler(false)
+                    handler(false, nil)
                 })
             }
         }
@@ -72,7 +72,7 @@ func api_sendVerificationCode(verificationCode coder: String, completionHandler:
         if let response = jsonDict,
             let handler = completionHandler {
                 dispatch_async(dispatch_get_main_queue(), {
-                    handler(response["status"] == "ok" ? true : false)
+                    handler(response["status"] == "ok" ? true : false, response["authentication_token"])
                 })
         }
     })

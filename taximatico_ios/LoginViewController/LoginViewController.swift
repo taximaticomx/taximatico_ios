@@ -91,9 +91,9 @@ extension LoginViewController {
             }
         
         case .Verification:
-            api_sendVerificationCode(verificationCode: phoneNumberTextField.text) { success in
+            api_sendVerificationCode(verificationCode: phoneNumberTextField.text) { success, token in
                 if success {
-                    println("Verificado")
+                    Session(token: token!).save()
                 }
             }
         }
