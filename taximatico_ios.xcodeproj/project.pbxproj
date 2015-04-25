@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B31AEBF38E00007739 /* AppDelegate.swift */; };
+		DFE933B61AEBF38E00007739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B51AEBF38E00007739 /* ViewController.swift */; };
+		DFE933B91AEBF38E00007739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE933B71AEBF38E00007739 /* Main.storyboard */; };
+		DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BA1AEBF38E00007739 /* Images.xcassets */; };
+		DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */; };
+		DFE933CA1AEBF38F00007739 /* taximatico_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933C91AEBF38F00007739 /* taximatico_iosTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFE933C41AEBF38F00007739 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFE933A61AEBF38E00007739 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFE933AD1AEBF38E00007739;
+			remoteInfo = taximatico_ios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFE933AE1AEBF38E00007739 /* taximatico_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taximatico_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE933B21AEBF38E00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE933B31AEBF38E00007739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DFE933B51AEBF38E00007739 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFE933B81AEBF38E00007739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFE933BA1AEBF38E00007739 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DFE933BD1AEBF38E00007739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DFE933C31AEBF38F00007739 /* taximatico_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taximatico_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE933C81AEBF38F00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFE933C91AEBF38F00007739 /* taximatico_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taximatico_iosTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFE933AB1AEBF38E00007739 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE933C01AEBF38F00007739 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFE933A51AEBF38E00007739 = {
+			isa = PBXGroup;
+			children = (
+				DFE933B01AEBF38E00007739 /* taximatico_ios */,
+				DFE933C61AEBF38F00007739 /* taximatico_iosTests */,
+				DFE933AF1AEBF38E00007739 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFE933AF1AEBF38E00007739 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFE933AE1AEBF38E00007739 /* taximatico_ios.app */,
+				DFE933C31AEBF38F00007739 /* taximatico_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFE933B01AEBF38E00007739 /* taximatico_ios */ = {
+			isa = PBXGroup;
+			children = (
+				DFE933B31AEBF38E00007739 /* AppDelegate.swift */,
+				DFE933B51AEBF38E00007739 /* ViewController.swift */,
+				DFE933B71AEBF38E00007739 /* Main.storyboard */,
+				DFE933BA1AEBF38E00007739 /* Images.xcassets */,
+				DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */,
+				DFE933B11AEBF38E00007739 /* Supporting Files */,
+			);
+			path = taximatico_ios;
+			sourceTree = "<group>";
+		};
+		DFE933B11AEBF38E00007739 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFE933B21AEBF38E00007739 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFE933C61AEBF38F00007739 /* taximatico_iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFE933C91AEBF38F00007739 /* taximatico_iosTests.swift */,
+				DFE933C71AEBF38F00007739 /* Supporting Files */,
+			);
+			path = taximatico_iosTests;
+			sourceTree = "<group>";
+		};
+		DFE933C71AEBF38F00007739 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFE933C81AEBF38F00007739 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFE933AD1AEBF38E00007739 /* taximatico_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE933CD1AEBF38F00007739 /* Build configuration list for PBXNativeTarget "taximatico_ios" */;
+			buildPhases = (
+				DFE933AA1AEBF38E00007739 /* Sources */,
+				DFE933AB1AEBF38E00007739 /* Frameworks */,
+				DFE933AC1AEBF38E00007739 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = taximatico_ios;
+			productName = taximatico_ios;
+			productReference = DFE933AE1AEBF38E00007739 /* taximatico_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFE933C21AEBF38F00007739 /* taximatico_iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE933D01AEBF38F00007739 /* Build configuration list for PBXNativeTarget "taximatico_iosTests" */;
+			buildPhases = (
+				DFE933BF1AEBF38F00007739 /* Sources */,
+				DFE933C01AEBF38F00007739 /* Frameworks */,
+				DFE933C11AEBF38F00007739 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFE933C51AEBF38F00007739 /* PBXTargetDependency */,
+			);
+			name = taximatico_iosTests;
+			productName = taximatico_iosTests;
+			productReference = DFE933C31AEBF38F00007739 /* taximatico_iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFE933A61AEBF38E00007739 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Taximatico;
+				TargetAttributes = {
+					DFE933AD1AEBF38E00007739 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					DFE933C21AEBF38F00007739 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = DFE933AD1AEBF38E00007739;
+					};
+				};
+			};
+			buildConfigurationList = DFE933A91AEBF38E00007739 /* Build configuration list for PBXProject "taximatico_ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFE933A51AEBF38E00007739;
+			productRefGroup = DFE933AF1AEBF38E00007739 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFE933AD1AEBF38E00007739 /* taximatico_ios */,
+				DFE933C21AEBF38F00007739 /* taximatico_iosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFE933AC1AEBF38E00007739 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE933B91AEBF38E00007739 /* Main.storyboard in Resources */,
+				DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */,
+				DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE933C11AEBF38F00007739 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFE933AA1AEBF38E00007739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE933B61AEBF38E00007739 /* ViewController.swift in Sources */,
+				DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE933BF1AEBF38F00007739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE933CA1AEBF38F00007739 /* taximatico_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFE933C51AEBF38F00007739 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFE933AD1AEBF38E00007739 /* taximatico_ios */;
+			targetProxy = DFE933C41AEBF38F00007739 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFE933B71AEBF38E00007739 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE933B81AEBF38E00007739 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFE933BD1AEBF38E00007739 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFE933CB1AEBF38F00007739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFE933CC1AEBF38F00007739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFE933CE1AEBF38F00007739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = taximatico_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DFE933CF1AEBF38F00007739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = taximatico_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DFE933D11AEBF38F00007739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = taximatico_iosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taximatico_ios.app/taximatico_ios";
+			};
+			name = Debug;
+		};
+		DFE933D21AEBF38F00007739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = taximatico_iosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/taximatico_ios.app/taximatico_ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFE933A91AEBF38E00007739 /* Build configuration list for PBXProject "taximatico_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE933CB1AEBF38F00007739 /* Debug */,
+				DFE933CC1AEBF38F00007739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE933CD1AEBF38F00007739 /* Build configuration list for PBXNativeTarget "taximatico_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE933CE1AEBF38F00007739 /* Debug */,
+				DFE933CF1AEBF38F00007739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DFE933D01AEBF38F00007739 /* Build configuration list for PBXNativeTarget "taximatico_iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE933D11AEBF38F00007739 /* Debug */,
+				DFE933D21AEBF38F00007739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFE933A61AEBF38E00007739 /* Project object */;
+}
