@@ -11,6 +11,7 @@
 		DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BA1AEBF38E00007739 /* Images.xcassets */; };
 		DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */; };
 		DFE933CA1AEBF38F00007739 /* taximatico_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933C91AEBF38F00007739 /* taximatico_iosTests.swift */; };
+		DFE933D51AEBF6CF00007739 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933D41AEBF6CF00007739 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		DFE933C31AEBF38F00007739 /* taximatico_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = taximatico_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE933C81AEBF38F00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFE933C91AEBF38F00007739 /* taximatico_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taximatico_iosTests.swift; sourceTree = "<group>"; };
+		DFE933D41AEBF6CF00007739 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE933B31AEBF38E00007739 /* AppDelegate.swift */,
+				DFE933D31AEBF68E00007739 /* LoginViewController */,
 				DFE933BA1AEBF38E00007739 /* Images.xcassets */,
 				DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */,
 				DFE933B11AEBF38E00007739 /* Supporting Files */,
@@ -104,6 +107,14 @@
 				DFE933C81AEBF38F00007739 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFE933D31AEBF68E00007739 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DFE933D41AEBF6CF00007739 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE933D51AEBF6CF00007739 /* LoginViewController.swift in Sources */,
 				DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
