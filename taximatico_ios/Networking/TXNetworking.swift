@@ -28,19 +28,17 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: { data, response, error in
         TXNetworkActivityIndicator.hideNetworkActivityIndicator()
         
-        if error != nil {
-            if let handler = completionHandler {
-                dispatch_async(dispatch_get_main_queue(), {
-                    handler(false)
-                })
+        if let handler = completionHandler where error != nil {
+            dispatch_async(dispatch_get_main_queue()) {
+                handler(false)
             }
         }
         
         var dictError: NSError?
-        let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &dictError) as? Dictionary<String, String>
+        let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &dictError) as? [String:String]
         
         if let response = jsonDict,
-            let handler = completionHandler {
+                handler = completionHandler {
                 dispatch_async(dispatch_get_main_queue(), {
                     handler(response["status"] == "ok" ? true : false)
                 })
@@ -70,19 +68,17 @@ func api_sendVerificationCode(verificationCode code: String, completionHandler: 
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: {data, response, error in
         TXNetworkActivityIndicator.hideNetworkActivityIndicator()
         
-        if error != nil {
-            if let handler = completionHandler {
-                dispatch_async(dispatch_get_main_queue(), {
-                    handler(false, nil)
-                })
+        if let handler = completionHandler where error != nil {
+            dispatch_async(dispatch_get_main_queue()) {
+                handler(false, nil)
             }
         }
         
         var dictError: NSError?
-        let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: &dictError) as? Dictionary<String, String>
+        let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: &dictError) as? [String:String]
         
         if let response = jsonDict,
-            let handler = completionHandler {
+                handler = completionHandler {
                 dispatch_async(dispatch_get_main_queue(), {
                     handler(response["status"] == "ok" ? true : false, response["authentication_token"])
                 })
@@ -90,5 +86,28 @@ func api_sendVerificationCode(verificationCode code: String, completionHandler: 
     })
     
     dataTask.resume()
+    
+}
+
+
+func api_getDrivers(completionHandler: (([Driver]?) -> Void)?) {
+    TXNetworkActivityIndicator.showNetworkActivityIndicator()
+    
+    let info = [
+        "authentication_token" : currentSession.token,
+        "latitude" : "19.264987",
+        "longitude" : "-103.710863"
+    ]
+    
+    var request = NSURLRequest(URL: UserDomainEndpoint.Drivers.URL().tx_URLWithParams(info)!)
+    let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: { data, response, error in
+        TXNetworkActivityIndicator.hideNetworkActivityIndicator()
+        
+        if let handler = completionHandler where error != nil {
+            dispatch_async(dispatch_get_main_queue()) {
+                handler(nil)
+            }
+        }
+    })
     
 }
