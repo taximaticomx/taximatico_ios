@@ -37,10 +37,11 @@ func api_sendRegistrationRequest(phoneNumber ph: String, completionHandler: ((Bo
         var dictError: NSError?
         let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &dictError) as? [String:String]
         
-        if let response = jsonDict,
-                handler = completionHandler {
+        if let
+            json    = jsonDict,
+            handler = completionHandler {
                 dispatch_async(dispatch_get_main_queue(), {
-                    handler(response["status"] == "ok" ? true : false)
+                    handler(json["status"] == "ok" ? true : false)
                 })
         }
     })
@@ -77,10 +78,11 @@ func api_sendVerificationCode(verificationCode code: String, completionHandler: 
         var dictError: NSError?
         let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: &dictError) as? [String:String]
         
-        if let response = jsonDict,
-                handler = completionHandler {
+        if let
+            json    = jsonDict,
+            handler = completionHandler {
                 dispatch_async(dispatch_get_main_queue(), {
-                    handler(response["status"] == "ok" ? true : false, response["authentication_token"])
+                    handler(json["status"] == "ok" ? true : false, json["authentication_token"])
                 })
         }
     })
@@ -94,20 +96,44 @@ func api_getDrivers(completionHandler: (([Driver]?) -> Void)?) {
     TXNetworkActivityIndicator.showNetworkActivityIndicator()
     
     let info = [
-        "authentication_token" : currentSession.token,
+        "authentication_token" : "389c6bd0b49d72245e51a0deba266801", //currentSession.token,
         "latitude" : "19.264987",
         "longitude" : "-103.710863"
     ]
     
     var request = NSURLRequest(URL: UserDomainEndpoint.Drivers.URL().tx_URLWithParams(info)!)
+    
     let dataTask = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration()).dataTaskWithRequest(request, completionHandler: { data, response, error in
         TXNetworkActivityIndicator.hideNetworkActivityIndicator()
         
-        if let handler = completionHandler where error != nil {
+        if let errorHandler = completionHandler where error != nil {
             dispatch_async(dispatch_get_main_queue()) {
-                handler(nil)
+                errorHandler(nil)
+            }
+        }
+        
+        var dictError: NSError?
+        let jsonDict = NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers, error: &dictError) as? [String:AnyObject]
+        
+        if let
+            status      = jsonDict!["status"] as? String,
+            driversList = jsonDict!["drivers"] as? [[String:AnyObject]],
+            handler     = completionHandler where status == "ok" {
+                var drivers = [Driver]()
+                
+                for driver in driversList {
+                    if let newDriver = Driver.fromJSON(driver) {
+                        drivers.append(newDriver)
+                    }
+                }
+                
+                handler(drivers)
+        }else{
+            if let errorHandler = completionHandler {
+                errorHandler(nil)
             }
         }
     })
     
+    dataTask.resume()
 }
