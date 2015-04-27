@@ -9,7 +9,7 @@
 import Foundation
 
 extension NSURL {
-    func tx_URLWithParams(params: Dictionary<String, String>) -> NSURL? {
+    func tx_URLWithParams(params: [String:String])-> NSURL? {
         return NSURL(string: "\(self)?\(params.tx_URLEncodedString())")
     }
 }

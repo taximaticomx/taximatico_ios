@@ -20,6 +20,14 @@ func tx_executeOnMainThread(block: (() -> ())?) {
     }
 }
 
+func tx_URLEncode(o: AnyObject) -> String {
+    let string = o as? String
+    if let s = string {
+        return s.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+    }
+    
+    return ""
+}
 
 // MARK: - Get
 
