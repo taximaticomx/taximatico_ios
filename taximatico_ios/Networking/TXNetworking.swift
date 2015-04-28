@@ -37,7 +37,7 @@ func requestWithURL(url: NSURL?, method: HTTPMethod = .GET, customHeaders: [Stri
     return nil
 }
 
-func dataFromJSON(json: AnyObject) -> NSData? {
+func dataFromJSON(json: [String:AnyObject]) -> NSData? {
     var dataError: NSError?
     let data = NSJSONSerialization.dataWithJSONObject(json, options: .PrettyPrinted, error: &dataError)
     
