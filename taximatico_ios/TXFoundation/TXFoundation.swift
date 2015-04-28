@@ -9,15 +9,38 @@
 import Foundation
 
 let userDefaults = NSUserDefaults.standardUserDefaults()
-
 // MARK: - Utilities
 
-func tx_executeOnMainThread(block: (() -> ())?) {
-    if let block = block {
+func tx_executeOnMainThread(handler: (Void -> Void)?) {
+    if let block = handler {
         if NSThread.isMainThread() {
             block()
         } else {
             dispatch_sync(dispatch_get_main_queue(), block);
+        }
+    }
+}
+
+func tx_executeOnMainThread<A>(x: A?, handler: ((A) -> Void)?) {
+    if NSThread.isMainThread() {
+        handler <*> x
+    } else {
+        dispatch_async(dispatch_get_main_queue()) {
+            handler <*> x
+        }
+    }
+}
+
+func tx_executeOnMainThread<A, B>(x: A?, y: B?, block: ((A, B) -> Void)?) {
+    if let block = block {
+        let mkBlock = curry { a, b in block(a, b) }
+        
+        if NSThread.isMainThread() {
+            mkBlock <*> x <*> y
+        } else {
+            dispatch_async(dispatch_get_main_queue()) {
+                mkBlock <*> x <*> y
+            }
         }
     }
 }
