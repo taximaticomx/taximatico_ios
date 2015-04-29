@@ -14,15 +14,26 @@ enum LoginState {
 }
 
 class LoginViewController: UIViewController {
-
+    
     lazy var logoImageView: UIImageView = {
         let i = UIImageView(image: UIImage(named: "LogoImage"))
         i.setTranslatesAutoresizingMaskIntoConstraints(false)
         i.contentMode = .ScaleAspectFit
         return i
-    }()
+        }()
     
-    lazy var phoneNumberTextField: UITextField = {
+    lazy var messageLabel: UILabel = {
+        let l = UILabel()
+        l.setTranslatesAutoresizingMaskIntoConstraints(false)
+        l.text = "Pedir un taxi nunca había\nsido tan fácil."
+        l.numberOfLines = 0
+        l.lineBreakMode = .ByWordWrapping
+        l.textAlignment = .Center
+        l.font = UIFont.systemFontOfSize(25)
+        return l
+        }()
+    
+    lazy var textField: UITextField = {
         let tf = UITextField(frame: CGRectMake(21, 343, 333, 52))
         tf.textAlignment = .Center
         tf.delegate = self
@@ -31,7 +42,7 @@ class LoginViewController: UIViewController {
         }()
     
     lazy var continueButton: UIButton = {
-        let b = UIButton(frame: self.phoneNumberTextField.frame)
+        let b = UIButton(frame: self.textField.frame)
         var newFrame = b.frame
         newFrame.origin.y += ((newFrame.size.height) + 12)
         b.frame = newFrame
@@ -58,12 +69,12 @@ class LoginViewController: UIViewController {
             
             switch currentState! {
             case .Registration:
-                self.phoneNumberTextField.placeholder = "# DE TELEFONO"
+                self.textField.placeholder = "# DE TELEFONO"
                 self.continueButton.setTitle("Continuar", forState: .Normal)
                 
             case .Verification:
-                self.phoneNumberTextField.text = ""
-                self.phoneNumberTextField.placeholder = "CODIGO DE VERIFICACION"
+                self.textField.text = ""
+                self.textField.placeholder = "CODIGO DE VERIFICACION"
                 self.continueButton.setTitle("Verificar", forState: .Normal)
             }
         }
@@ -79,7 +90,10 @@ class LoginViewController: UIViewController {
         self.view.addSubview(self.logoImageView)
         self.view.addConstraints(self.constraintsForLogoImageView())
         
-        self.view.addSubview(self.phoneNumberTextField)
+        self.view.addSubview(self.messageLabel)
+        self.view.addConstraints(self.constraintsForMessageLabel())
+        
+        self.view.addSubview(self.textField)
         self.view.addSubview(self.continueButton)
         
         self.view.addGestureRecognizer(self.tapGestureRecognizer)
@@ -90,20 +104,20 @@ class LoginViewController: UIViewController {
 // MARK: - Events
 extension LoginViewController {
     func backgroundTapped() {
-        self.phoneNumberTextField.resignFirstResponder()
+        self.textField.resignFirstResponder()
     }
     
     func continueButtonPressed() {
         switch self.state {
         case .Registration:
-            api_sendRegistrationRequest(phoneNumber: self.phoneNumberTextField.text) { success in
+            api_sendRegistrationRequest(phoneNumber: self.textField.text) { success in
                 if success {
                     self.state = .Verification
                 }
             }
-        
+            
         case .Verification:
-            api_sendVerificationCode(verificationCode: phoneNumberTextField.text) { success, token in
+            api_sendVerificationCode(verificationCode: textField.text) { success, token in
                 if success {
                     Session(token: token!).save()
                 }
@@ -127,11 +141,30 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController {
     func constraintsForLogoImageView() -> [AnyObject] {
-        var constraints = Array<AnyObject>()
+        var constraints = [AnyObject]()
         
         constraints.append(NSLayoutConstraint(item: self.logoImageView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1, constant: 43))
-        constraints.append(NSLayoutConstraint(item: self.logoImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 124))
+        constraints.append(NSLayoutConstraint(item: self.logoImageView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 100))
         constraints += NSLayoutConstraint.constraintsWithVisualFormat("|-17-[logoImageView]-17-|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["logoImageView": self.logoImageView])
+        
+        return constraints
+    }
+    
+    //    func constraintsForTextField() -> [AnyObject] {
+    //        var constraints = [AnyObject]()
+    //
+    //        constraints.append(NSLayoutConstraint(item: self.textField, attribute: .Top, relatedBy: .Equal, toItem: self.logoImageView, attribute: .Bottom, multiplier: 1, constant: <#CGFloat#>))
+    //
+    //        return constraints
+    //    }
+    
+    func constraintsForMessageLabel() -> [AnyObject] {
+        var constraints = [AnyObject]()
+        
+        constraints.append(NSLayoutConstraint(item: self.messageLabel, attribute: .Top, relatedBy: .Equal, toItem: self.logoImageView, attribute: .Bottom, multiplier: 1, constant: 14))
+        constraints.append(NSLayoutConstraint(item: self.messageLabel, attribute: .Height, relatedBy: .GreaterThanOrEqual, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 60))
+        constraints.append(NSLayoutConstraint(item: self.messageLabel, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: CGRectGetWidth(self.view.frame) * 0.74))
+        constraints.append(NSLayoutConstraint(item: self.messageLabel, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0))
         
         return constraints
     }
