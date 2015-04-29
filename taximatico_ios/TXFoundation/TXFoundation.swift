@@ -118,6 +118,14 @@ func int(input: [NSObject:AnyObject], key: String) -> Int? {
     return number(input, key).map { $0.integerValue }
 }
 
+func float(input: [NSObject:AnyObject], key: String) -> Float? {
+    return number(input, key).map { $0.floatValue }
+}
+
+func double(input: [NSObject:AnyObject], key: String) -> Double? {
+    return number(input, key).map { $0.doubleValue }
+}
+
 func string(input: [String:AnyObject], key: String) -> String? {
     return input[key] >>>= { $0 as? String }
 }
