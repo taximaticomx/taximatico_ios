@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF3C94ED1AEEEF8A00F9C2B4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C94EC1AEEEF8A00F9C2B4 /* Operators.swift */; };
 		DF59A5A41AEC021E00B5913A /* TXNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5A31AEC021E00B5913A /* TXNetworking.swift */; };
 		DF59A5A61AEC056000B5913A /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5A51AEC056000B5913A /* Endpoints.swift */; };
 		DF59A5A91AEC09C500B5913A /* TXUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5A81AEC09C500B5913A /* TXUIKit.swift */; };
@@ -15,6 +16,7 @@
 		DF59A5B61AEC2D1F00B5913A /* TXURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5B51AEC2D1F00B5913A /* TXURL.swift */; };
 		DF59A5B81AEC2E7700B5913A /* TXDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5B71AEC2E7700B5913A /* TXDictionary.swift */; };
 		DFBC17BC1AEC429700AAD246 /* TXColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC17BB1AEC429700AAD246 /* TXColor.swift */; };
+		DFBC17BF1AEC487C00AAD246 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC17BE1AEC487C00AAD246 /* Driver.swift */; };
 		DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B31AEBF38E00007739 /* AppDelegate.swift */; };
 		DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BA1AEBF38E00007739 /* Images.xcassets */; };
 		DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */; };
@@ -33,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF3C94EC1AEEEF8A00F9C2B4 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		DF59A5A31AEC021E00B5913A /* TXNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXNetworking.swift; sourceTree = "<group>"; };
 		DF59A5A51AEC056000B5913A /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		DF59A5A81AEC09C500B5913A /* TXUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXUIKit.swift; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 		DF59A5B51AEC2D1F00B5913A /* TXURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXURL.swift; sourceTree = "<group>"; };
 		DF59A5B71AEC2E7700B5913A /* TXDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXDictionary.swift; sourceTree = "<group>"; };
 		DFBC17BB1AEC429700AAD246 /* TXColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXColor.swift; sourceTree = "<group>"; };
+		DFBC17BE1AEC487C00AAD246 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		DFE933AE1AEBF38E00007739 /* taximatico_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taximatico_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE933B21AEBF38E00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFE933B31AEBF38E00007739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				DF59A5AB1AEC0D9700B5913A /* TXFoundation.swift */,
 				DF59A5B51AEC2D1F00B5913A /* TXURL.swift */,
 				DF59A5B71AEC2E7700B5913A /* TXDictionary.swift */,
+				DF3C94EC1AEEEF8A00F9C2B4 /* Operators.swift */,
 			);
 			path = TXFoundation;
 			sourceTree = "<group>";
@@ -104,6 +109,14 @@
 				DF59A5B31AEC257500B5913A /* Session.swift */,
 			);
 			path = SessionsManager;
+			sourceTree = "<group>";
+		};
+		DFBC17BD1AEC486C00AAD246 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFBC17BE1AEC487C00AAD246 /* Driver.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DFE933A51AEBF38E00007739 = {
@@ -127,6 +140,7 @@
 		DFE933B01AEBF38E00007739 /* taximatico_ios */ = {
 			isa = PBXGroup;
 			children = (
+				DFBC17BD1AEC486C00AAD246 /* Models */,
 				DFE933B31AEBF38E00007739 /* AppDelegate.swift */,
 				DF59A5B21AEC257500B5913A /* SessionsManager */,
 				DF59A5AA1AEC0D7E00B5913A /* TXFoundation */,
@@ -272,10 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBC17BF1AEC487C00AAD246 /* Driver.swift in Sources */,
 				DFE933D51AEBF6CF00007739 /* LoginViewController.swift in Sources */,
 				DFBC17BC1AEC429700AAD246 /* TXColor.swift in Sources */,
 				DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */,
 				DF59A5B81AEC2E7700B5913A /* TXDictionary.swift in Sources */,
+				DF3C94ED1AEEEF8A00F9C2B4 /* Operators.swift in Sources */,
 				DF59A5B41AEC257500B5913A /* Session.swift in Sources */,
 				DF59A5AC1AEC0D9700B5913A /* TXFoundation.swift in Sources */,
 				DF59A5A61AEC056000B5913A /* Endpoints.swift in Sources */,

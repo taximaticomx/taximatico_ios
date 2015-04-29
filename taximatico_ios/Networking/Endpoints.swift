@@ -14,6 +14,7 @@ private let user_domain_path = "/users"
 enum UserDomainEndpoint: String {
     case Registrations = "/registrations"
     case CodeVerification = "/verification_codes/check"
+    case Drivers = "/drivers"
     
     func URL() -> NSURL {
         return NSURL(string: "\(api_base)\(user_domain_path)\(self.rawValue)")!
