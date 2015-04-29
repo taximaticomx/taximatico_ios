@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum LoginState {
-    case Registration
-    case Verification
-}
-
 class LoginViewController: UIViewController {
     
     lazy var logoImageView: UIImageView = {
@@ -37,6 +32,7 @@ class LoginViewController: UIViewController {
         let tf = UITextField(frame: CGRectMake(21, 343, 333, 52))
         tf.textAlignment = .Center
         tf.delegate = self
+        tf.placeholder = "# DE TELEFONO"
         tf.backgroundColor = UIColor.tx_lightGreyColor()
         return tf
         }()
@@ -50,6 +46,7 @@ class LoginViewController: UIViewController {
         b.setTitleColor(UIColor.blackColor(), forState: .Highlighted)
         b.backgroundColor = UIColor.tx_disabledColor()
         b.addTarget(self, action: "continueButtonPressed", forControlEvents: .TouchUpInside)
+        b.setTitle("Continuar", forState: .Normal)
         return b
         }()
     
@@ -58,34 +55,10 @@ class LoginViewController: UIViewController {
         }()
     
     
-    private(set) var currentState: LoginState?
-    var state: LoginState {
-        get {
-            return currentState!
-        }
-        
-        set {
-            currentState = newValue
-            
-            switch currentState! {
-            case .Registration:
-                self.textField.placeholder = "# DE TELEFONO"
-                self.continueButton.setTitle("Continuar", forState: .Normal)
-                
-            case .Verification:
-                self.textField.text = ""
-                self.textField.placeholder = "CODIGO DE VERIFICACION"
-                self.continueButton.setTitle("Verificar", forState: .Normal)
-            }
-        }
-    }
-    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.state = .Registration
         
         self.view.addSubview(self.logoImageView)
         self.view.addConstraints(self.constraintsForLogoImageView())
@@ -108,21 +81,10 @@ extension LoginViewController {
     }
     
     func continueButtonPressed() {
-        switch self.state {
-        case .Registration:
             api_sendRegistrationRequest(phoneNumber: self.textField.text) { success in
                 if success {
-                    self.state = .Verification
                 }
             }
-            
-        case .Verification:
-            api_sendVerificationCode(verificationCode: textField.text) { success, token in
-                if success {
-                    Session(token: token!).save()
-                }
-            }
-        }
     }
 }
 
