@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F4FBDEB6A6CEE0A1E8959AC /* Pods-taximatico_ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9F28F371612E37964CAC47A /* Pods-taximatico_ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		152E66E20C95AB14291723AF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2D69AE9A481D6A67314E7 /* Result.swift */; };
+		6ABD6B0E6929032B9F30CDD4 /* Pods-taximatico_ios-LlamaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E264A231AB35F0AE4035926 /* Pods-taximatico_ios-LlamaKit-dummy.m */; };
+		A30B31396844E2769A1323A0 /* Pods-taximatico_ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F04E3EB360411C21679646 /* Pods-taximatico_ios-dummy.m */; };
+		ACD81F90AC1931886AF7A297 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4CB5FBDF81887E2F0E0D4D /* Foundation.framework */; };
+		DBC664C6776BEFFDD3F8AB06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4CB5FBDF81887E2F0E0D4D /* Foundation.framework */; };
+		E3148AE8849D932466A3642D /* Pods-taximatico_ios-LlamaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 483A4FBB5375EA09C5873E55 /* Pods-taximatico_ios-LlamaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B166AA9A701545602E90FBCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70AB09A65D47EB3071050E2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6A1CE21735D0DAB09A32BA2;
+			remoteInfo = "Pods-taximatico_ios-LlamaKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04D2D69AE9A481D6A67314E7 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = LlamaKit/Result.swift; sourceTree = "<group>"; };
+		0E264A231AB35F0AE4035926 /* Pods-taximatico_ios-LlamaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-taximatico_ios-LlamaKit-dummy.m"; sourceTree = "<group>"; };
+		0EFDCD1185AD676B5319E239 /* Pods-taximatico_ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-taximatico_ios.modulemap"; sourceTree = "<group>"; };
+		0F4CB5FBDF81887E2F0E0D4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2346C98ECEAA82D7476A541F /* Pods-taximatico_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-taximatico_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		26F04E3EB360411C21679646 /* Pods-taximatico_ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-taximatico_ios-dummy.m"; sourceTree = "<group>"; };
+		34423738F6DAA8ECE129BD51 /* Pods-taximatico_ios-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-taximatico_ios-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3802E7AB6D25A0FB974C998A /* Pods_taximatico_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taximatico_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		385D033BAE06802FA79B3766 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		483A4FBB5375EA09C5873E55 /* Pods-taximatico_ios-LlamaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-taximatico_ios-LlamaKit-umbrella.h"; sourceTree = "<group>"; };
+		489F005DA18B171B71418945 /* Pods-taximatico_ios-LlamaKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-taximatico_ios-LlamaKit.xcconfig"; sourceTree = "<group>"; };
+		589E632F1540FB79AAA0E51A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A32FD9B2185F24ED06F38B /* Pods-taximatico_ios-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-taximatico_ios-acknowledgements.plist"; sourceTree = "<group>"; };
+		A49DD5807C69EC2A1E285313 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9F28F371612E37964CAC47A /* Pods-taximatico_ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-taximatico_ios-umbrella.h"; sourceTree = "<group>"; };
+		ABAAF6826BB42F27EDEA6DE0 /* Pods-taximatico_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-taximatico_ios.release.xcconfig"; sourceTree = "<group>"; };
+		B267BEFE8A5D7140408B64A0 /* Pods-taximatico_ios-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-taximatico_ios-frameworks.sh"; sourceTree = "<group>"; };
+		D816445B7621D981C94AF3CA /* Pods-taximatico_ios-LlamaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-taximatico_ios-LlamaKit.modulemap"; sourceTree = "<group>"; };
+		DB0970DEC2A0DCAD796B11F4 /* Pods-taximatico_ios-LlamaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-taximatico_ios-LlamaKit-prefix.pch"; sourceTree = "<group>"; };
+		E62A5EEEFA483F09CE41C114 /* Pods-taximatico_ios-LlamaKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-taximatico_ios-LlamaKit-Private.xcconfig"; sourceTree = "<group>"; };
+		ED769726199E762E3EB84A6E /* Pods-taximatico_ios-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-taximatico_ios-resources.sh"; sourceTree = "<group>"; };
+		F86D32B70D0A5AD1CC10A3EB /* LlamaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LlamaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4097D1B6BCB9F706A31370 /* Pods-taximatico_ios-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-taximatico_ios-environment.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A654689735628212CE2BCED8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC664C6776BEFFDD3F8AB06 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC24750665F7ECC972E1A26F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACD81F90AC1931886AF7A297 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		018182CE95C73E27598B4A95 = {
+			isa = PBXGroup;
+			children = (
+				385D033BAE06802FA79B3766 /* Podfile */,
+				385C273FAACDEC545F10B0ED /* Frameworks */,
+				B8F04E6EE0E90B2BEF037FCD /* Pods */,
+				F83063D2E99C8424B9D125EE /* Products */,
+				D49BB8971089D1C477461CC5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		385C273FAACDEC545F10B0ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C338AC419492AE8E608DB51 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C338AC419492AE8E608DB51 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0F4CB5FBDF81887E2F0E0D4D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7D49246EF49C95CF9FFA3DCE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				589E632F1540FB79AAA0E51A /* Info.plist */,
+				D816445B7621D981C94AF3CA /* Pods-taximatico_ios-LlamaKit.modulemap */,
+				489F005DA18B171B71418945 /* Pods-taximatico_ios-LlamaKit.xcconfig */,
+				E62A5EEEFA483F09CE41C114 /* Pods-taximatico_ios-LlamaKit-Private.xcconfig */,
+				0E264A231AB35F0AE4035926 /* Pods-taximatico_ios-LlamaKit-dummy.m */,
+				DB0970DEC2A0DCAD796B11F4 /* Pods-taximatico_ios-LlamaKit-prefix.pch */,
+				483A4FBB5375EA09C5873E55 /* Pods-taximatico_ios-LlamaKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-taximatico_ios-LlamaKit";
+			sourceTree = "<group>";
+		};
+		B7E5B112E88D5FDD73B0B54E /* LlamaKit */ = {
+			isa = PBXGroup;
+			children = (
+				04D2D69AE9A481D6A67314E7 /* Result.swift */,
+				7D49246EF49C95CF9FFA3DCE /* Support Files */,
+			);
+			path = LlamaKit;
+			sourceTree = "<group>";
+		};
+		B8F04E6EE0E90B2BEF037FCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7E5B112E88D5FDD73B0B54E /* LlamaKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D49BB8971089D1C477461CC5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED792593C88EE338936466A9 /* Pods-taximatico_ios */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ED792593C88EE338936466A9 /* Pods-taximatico_ios */ = {
+			isa = PBXGroup;
+			children = (
+				A49DD5807C69EC2A1E285313 /* Info.plist */,
+				0EFDCD1185AD676B5319E239 /* Pods-taximatico_ios.modulemap */,
+				34423738F6DAA8ECE129BD51 /* Pods-taximatico_ios-acknowledgements.markdown */,
+				76A32FD9B2185F24ED06F38B /* Pods-taximatico_ios-acknowledgements.plist */,
+				26F04E3EB360411C21679646 /* Pods-taximatico_ios-dummy.m */,
+				FA4097D1B6BCB9F706A31370 /* Pods-taximatico_ios-environment.h */,
+				B267BEFE8A5D7140408B64A0 /* Pods-taximatico_ios-frameworks.sh */,
+				ED769726199E762E3EB84A6E /* Pods-taximatico_ios-resources.sh */,
+				A9F28F371612E37964CAC47A /* Pods-taximatico_ios-umbrella.h */,
+				2346C98ECEAA82D7476A541F /* Pods-taximatico_ios.debug.xcconfig */,
+				ABAAF6826BB42F27EDEA6DE0 /* Pods-taximatico_ios.release.xcconfig */,
+			);
+			name = "Pods-taximatico_ios";
+			path = "Target Support Files/Pods-taximatico_ios";
+			sourceTree = "<group>";
+		};
+		F83063D2E99C8424B9D125EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F86D32B70D0A5AD1CC10A3EB /* LlamaKit.framework */,
+				3802E7AB6D25A0FB974C998A /* Pods_taximatico_ios.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6BDB0C8EF1E162F66170DA97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F4FBDEB6A6CEE0A1E8959AC /* Pods-taximatico_ios-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8D2C3B4C0174629915BEC6C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3148AE8849D932466A3642D /* Pods-taximatico_ios-LlamaKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7D58F2D1EEE87B739FAC9C4B /* Pods-taximatico_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0BF6B7F478C90B2721DA493 /* Build configuration list for PBXNativeTarget "Pods-taximatico_ios" */;
+			buildPhases = (
+				49FE516BC01E86F08FD65B76 /* Sources */,
+				A654689735628212CE2BCED8 /* Frameworks */,
+				6BDB0C8EF1E162F66170DA97 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37839384DE8478BA62C40632 /* PBXTargetDependency */,
+			);
+			name = "Pods-taximatico_ios";
+			productName = "Pods-taximatico_ios";
+			productReference = 3802E7AB6D25A0FB974C998A /* Pods_taximatico_ios.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E6A1CE21735D0DAB09A32BA2 /* Pods-taximatico_ios-LlamaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA0F6EF4FE097125E79D913 /* Build configuration list for PBXNativeTarget "Pods-taximatico_ios-LlamaKit" */;
+			buildPhases = (
+				FD8D8DFC5552D6CD2B0B5CB1 /* Sources */,
+				EC24750665F7ECC972E1A26F /* Frameworks */,
+				E8D2C3B4C0174629915BEC6C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-taximatico_ios-LlamaKit";
+			productName = "Pods-taximatico_ios-LlamaKit";
+			productReference = F86D32B70D0A5AD1CC10A3EB /* LlamaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70AB09A65D47EB3071050E2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 27F14093084F2F85471829F5 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 018182CE95C73E27598B4A95;
+			productRefGroup = F83063D2E99C8424B9D125EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D58F2D1EEE87B739FAC9C4B /* Pods-taximatico_ios */,
+				E6A1CE21735D0DAB09A32BA2 /* Pods-taximatico_ios-LlamaKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49FE516BC01E86F08FD65B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A30B31396844E2769A1323A0 /* Pods-taximatico_ios-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD8D8DFC5552D6CD2B0B5CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ABD6B0E6929032B9F30CDD4 /* Pods-taximatico_ios-LlamaKit-dummy.m in Sources */,
+				152E66E20C95AB14291723AF /* Result.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37839384DE8478BA62C40632 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-taximatico_ios-LlamaKit";
+			target = E6A1CE21735D0DAB09A32BA2 /* Pods-taximatico_ios-LlamaKit */;
+			targetProxy = B166AA9A701545602E90FBCE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		138013C1D2C826337BDE99A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABAAF6826BB42F27EDEA6DE0 /* Pods-taximatico_ios.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-taximatico_ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-taximatico_ios/Pods-taximatico_ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_taximatico_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39E7CAEBBB9E36D220A75B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64A17CA10DCE4B1A0A4148F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2346C98ECEAA82D7476A541F /* Pods-taximatico_ios.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-taximatico_ios/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-taximatico_ios/Pods-taximatico_ios.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_taximatico_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE694D02FA4275D7FD2BAB6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62A5EEEFA483F09CE41C114 /* Pods-taximatico_ios-LlamaKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-taximatico_ios-LlamaKit/Pods-taximatico_ios-LlamaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-taximatico_ios-LlamaKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-taximatico_ios-LlamaKit/Pods-taximatico_ios-LlamaKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LlamaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DAB41819E3106563DF88C726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E85D8E98A320A455224FE9A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62A5EEEFA483F09CE41C114 /* Pods-taximatico_ios-LlamaKit-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-taximatico_ios-LlamaKit/Pods-taximatico_ios-LlamaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-taximatico_ios-LlamaKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-taximatico_ios-LlamaKit/Pods-taximatico_ios-LlamaKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LlamaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27F14093084F2F85471829F5 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB41819E3106563DF88C726 /* Debug */,
+				39E7CAEBBB9E36D220A75B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA0F6EF4FE097125E79D913 /* Build configuration list for PBXNativeTarget "Pods-taximatico_ios-LlamaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE694D02FA4275D7FD2BAB6A /* Debug */,
+				E85D8E98A320A455224FE9A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0BF6B7F478C90B2721DA493 /* Build configuration list for PBXNativeTarget "Pods-taximatico_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64A17CA10DCE4B1A0A4148F5 /* Debug */,
+				138013C1D2C826337BDE99A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70AB09A65D47EB3071050E2A /* Project object */;
+}

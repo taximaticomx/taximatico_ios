@@ -1,0 +1,6 @@
+framework module Pods_taximatico_ios {
+  umbrella header "Pods-taximatico_ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
