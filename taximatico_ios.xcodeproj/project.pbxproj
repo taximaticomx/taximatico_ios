@@ -18,6 +18,9 @@
 		DF59A5B81AEC2E7700B5913A /* TXDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF59A5B71AEC2E7700B5913A /* TXDictionary.swift */; };
 		DFBC17BC1AEC429700AAD246 /* TXColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC17BB1AEC429700AAD246 /* TXColor.swift */; };
 		DFBC17BF1AEC487C00AAD246 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC17BE1AEC487C00AAD246 /* Driver.swift */; };
+		DFD126201AF194A6003F2B75 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */; };
+		DFD126221AF1A37F003F2B75 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */; };
+		DFD126231AF1A37F003F2B75 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B31AEBF38E00007739 /* AppDelegate.swift */; };
 		DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BA1AEBF38E00007739 /* Images.xcassets */; };
 		DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */; };
@@ -35,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DFD126241AF1A37F003F2B75 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DFD126231AF1A37F003F2B75 /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		29D5542C88EB5831DE2EC2F2 /* Pods-taximatico_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taximatico_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-taximatico_ios/Pods-taximatico_ios.release.xcconfig"; sourceTree = "<group>"; };
 		5EEB0D7A1339758651CA434E /* Pods-taximatico_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taximatico_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-taximatico_ios/Pods-taximatico_ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +67,7 @@
 		DF59A5B71AEC2E7700B5913A /* TXDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXDictionary.swift; sourceTree = "<group>"; };
 		DFBC17BB1AEC429700AAD246 /* TXColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXColor.swift; sourceTree = "<group>"; };
 		DFBC17BE1AEC487C00AAD246 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
 		DFE933AE1AEBF38E00007739 /* taximatico_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taximatico_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE933B21AEBF38E00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFE933B31AEBF38E00007739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +85,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C060DE4449329CFA57828C /* Pods_taximatico_ios.framework in Frameworks */,
+				DFD126221AF1A37F003F2B75 /* ReactiveCocoa.framework in Frameworks */,
+				DFD126201AF194A6003F2B75 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +103,7 @@
 		777E3EB804FBE5663AD59B0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */,
 				9ADD4FB0C496B8B999003AAC /* Pods_taximatico_ios.framework */,
 			);
 			name = Frameworks;
@@ -235,6 +256,7 @@
 				DFE933AC1AEBF38E00007739 /* Resources */,
 				8D34CD72B01227FC5CA3987C /* Embed Pods Frameworks */,
 				4A2AF51772AC963052C2298A /* Copy Pods Resources */,
+				DFD126241AF1A37F003F2B75 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -503,10 +525,19 @@
 			baseConfigurationReference = 5EEB0D7A1339758651CA434E /* Pods-taximatico_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/taximatico_ios/Frameworks",
+				);
 				INFOPLIST_FILE = taximatico_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) taximatico_ios/Frameworks @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"LlamaKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -516,10 +547,19 @@
 			baseConfigurationReference = 29D5542C88EB5831DE2EC2F2 /* Pods-taximatico_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/taximatico_ios/Frameworks",
+				);
 				INFOPLIST_FILE = taximatico_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) taximatico_ios/Frameworks @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					"\"LlamaKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
