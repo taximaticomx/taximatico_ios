@@ -9,22 +9,30 @@
 import Foundation
 
 struct Location {
-    var lat: Float?
-    var long: Float?
+    var lat: Double?
+    var lon: Double?
 }
 
 struct Driver {
     var id: Int?
     var name: String?
     var taxiId: Int?
+    var location: Location?
     
     static func fromJSON(json: [String:AnyObject]) -> Driver? {
-        let mkDriver = curry { id, name, taxiId in Driver(id: id, name: name, taxiId: taxiId) }
+        let mkLocation = curry { lat, lon in Location(lat: lat, lon: lon) }
+        let mkDriver = curry { id, name, taxiId, location in Driver(id: id, name: name, taxiId: taxiId, location: location) }
+        
+        let location = toDict(json["location"]!) >>>= {
+            mkLocation <*> double($0, "latitude")!
+                <*> double($0, "longitude")!
+        }
         
         return toDict(json) >>>= {
-                mkDriver <*> int($0, "id")!
-                        <*> string($0, "name")!
-                        <*> int($0, "taxi_number")!
+            mkDriver <*> int($0, "id")!
+                <*> string($0, "name")!
+                <*> int($0, "taxi_number")!
+                <*> location!
         }
     }
 }
@@ -32,7 +40,7 @@ struct Driver {
 extension Driver: Printable {
     var description: String {
         get {
-            return "\nDriver:\n\tId: \(self.id!)\n\tName: \(self.name!)\n\tTaxi ID: \(self.taxiId!)"
+            return "\nDriver:\n\tId: \(self.id!)\n\tName: \(self.name!)\n\tTaxi ID: \(self.taxiId!)\n\tLocation: \(self.location!.lat!) \(self.location!.lon!)"
         }
     }
 }
