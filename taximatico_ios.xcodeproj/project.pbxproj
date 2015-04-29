@@ -21,6 +21,7 @@
 		DFD126201AF194A6003F2B75 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */; };
 		DFD126221AF1A37F003F2B75 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */; };
 		DFD126231AF1A37F003F2B75 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DFD126261AF1A42E003F2B75 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD126251AF1A42E003F2B75 /* LoginViewModel.swift */; };
 		DFE933B41AEBF38E00007739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE933B31AEBF38E00007739 /* AppDelegate.swift */; };
 		DFE933BB1AEBF38E00007739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BA1AEBF38E00007739 /* Images.xcassets */; };
 		DFE933BE1AEBF38E00007739 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE933BC1AEBF38E00007739 /* LaunchScreen.xib */; };
@@ -68,6 +69,7 @@
 		DFBC17BB1AEC429700AAD246 /* TXColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TXColor.swift; sourceTree = "<group>"; };
 		DFBC17BE1AEC487C00AAD246 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		DFD1261F1AF194A6003F2B75 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ReactiveCocoa.framework; sourceTree = "<group>"; };
+		DFD126251AF1A42E003F2B75 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DFE933AE1AEBF38E00007739 /* taximatico_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taximatico_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE933B21AEBF38E00007739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFE933B31AEBF38E00007739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE933D41AEBF6CF00007739 /* LoginViewController.swift */,
+				DFD126251AF1A42E003F2B75 /* LoginViewModel.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				DF3C94ED1AEEEF8A00F9C2B4 /* Operators.swift in Sources */,
 				DF59A5B41AEC257500B5913A /* Session.swift in Sources */,
 				DF59A5AC1AEC0D9700B5913A /* TXFoundation.swift in Sources */,
+				DFD126261AF1A42E003F2B75 /* LoginViewModel.swift in Sources */,
 				DF59A5A61AEC056000B5913A /* Endpoints.swift in Sources */,
 				DF59A5B61AEC2D1F00B5913A /* TXURL.swift in Sources */,
 				DF59A5A91AEC09C500B5913A /* TXUIKit.swift in Sources */,
@@ -529,6 +533,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/taximatico_ios/Frameworks",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = taximatico_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) taximatico_ios/Frameworks @executable_path/Frameworks";
@@ -537,7 +542,9 @@
 					"-ObjC",
 					"-framework",
 					"\"LlamaKit\"",
+					"-Weverything",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -551,6 +558,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/taximatico_ios/Frameworks",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = taximatico_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) taximatico_ios/Frameworks @executable_path/Frameworks";
@@ -559,7 +567,9 @@
 					"-ObjC",
 					"-framework",
 					"\"LlamaKit\"",
+					"-Weverything",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
